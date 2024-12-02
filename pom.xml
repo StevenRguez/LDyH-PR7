@@ -17,6 +17,11 @@
     <reporting>
         <plugins>
             <plugin>
+                <groupId>com.soebes.maven.plugins</groupId>
+                <artifactId>doxygen-maven-plugin</artifactId>
+                <version>1.1.0</version>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>3.5.0</version>
@@ -82,8 +87,8 @@
                     <version>0.1.0</version>
                     <configuration>
                         <workingDirectory>${basedir}</workingDirectory>
-                            <executable>doxygen</executable>
-                            <doxyfile>Doxyfile</doxyfile>
+                        <executable>doxygen</executable>
+                        <doxyfile>Doxyfile</doxyfile>
                         <autogen>false</autogen>
                     </configuration>
                     <executions>
