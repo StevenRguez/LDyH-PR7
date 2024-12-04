@@ -54,16 +54,16 @@ public class Flight {
     }
 
     public boolean addPassenger(Passenger passenger) {
-<span class="nc bnc" id="L57" title="All 2 branches missed.">        if (getNumberOfPassengers() &gt;= seats) {</span>
-<span class="nc" id="L58">            throw new RuntimeException(&quot;Not enough seats for flight &quot; + getFlightNumber());</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">        if (getNumberOfPassengers() &gt;= seats) {</span>
+<span class="fc" id="L58">            throw new RuntimeException(&quot;Not enough seats for flight &quot; + getFlightNumber());</span>
         }
-<span class="nc" id="L60">        passenger.setFlight(this);</span>
-<span class="nc" id="L61">        return passengers.add(passenger);</span>
+<span class="fc" id="L60">        passenger.setFlight(this);</span>
+<span class="fc" id="L61">        return passengers.add(passenger);</span>
     }
 
     public boolean removePassenger(Passenger passenger) {
-<span class="nc" id="L65">        passenger.setFlight(null);</span>
-<span class="nc" id="L66">        return passengers.remove(passenger);</span>
+<span class="fc" id="L65">        passenger.setFlight(null);</span>
+<span class="fc" id="L66">        return passengers.remove(passenger);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

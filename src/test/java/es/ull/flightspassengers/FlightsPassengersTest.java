@@ -14,7 +14,7 @@ public class FlightsPassengersTest {
     class TestsBasicosAeropuerto {
 
         @Test
-        void shouldJoinFlightSuccessfully() {
+        void testCreacionVuelo() {
             Flight flight = new Flight("AA123", 10);
             Passenger passenger = new Passenger("12345", "John Doe", "US");
             passenger.joinFlight(flight);
@@ -23,7 +23,7 @@ public class FlightsPassengersTest {
         }
 
         @Test
-        void shouldSwitchFlightsSuccessfully() {
+        void testCambioVuelo() {
             Flight flight1 = new Flight("AA123", 10);
             Flight flight2 = new Flight("BB234", 10);
             Passenger passenger = new Passenger("12345", "John Doe", "US");
@@ -37,11 +37,37 @@ public class FlightsPassengersTest {
         }
 
         @Test
-        void shouldThrowExceptionWhenCannotAddToNewFlight() {
+        void testExcepcionVueloCompleto() {
             Flight fullFlight = new Flight("AA123", 0);
             Passenger passenger = new Passenger("12345", "John Doe", "US");
 
             assertThrows(RuntimeException.class, () -> passenger.joinFlight(fullFlight));
+        }
+
+        @Test
+        void testToString() {
+            Passenger passenger = new Passenger("12345", "John Doe", "US");
+            String expected = "Passenger John Doe with identifier: 12345 from US";
+            assertEquals(expected, passenger.toString());
+        }
+
+        @Test
+        void testAnyadirPasajeroAlVuelo() {
+            Flight flight = new Flight("AA123", 2);
+            Passenger passenger = new Passenger("12345", "John Doe", "US");
+            assertTrue(flight.addPassenger(passenger));
+            assertEquals(1, flight.getNumberOfPassengers());
+            assertEquals(flight, passenger.getFlight());
+        }
+
+        @Test
+        void testEliminarPasajeroDelVuelo() {
+            Flight flight = new Flight("AA123", 2);
+            Passenger passenger = new Passenger("12345", "John Doe", "US");
+            flight.addPassenger(passenger);
+            assertTrue(flight.removePassenger(passenger));
+            assertEquals(0, flight.getNumberOfPassengers());
+            assertNull(passenger.getFlight());
         }
     }
 }

@@ -57,27 +57,27 @@ public class Passenger {
     }
 
     public Flight getFlight() {
-<span class="nc" id="L60">        return flight;</span>
+<span class="fc" id="L60">        return flight;</span>
     }
 
     public void joinFlight(Flight flight) {
-<span class="nc" id="L64">        Flight previousFlight = this.flight;</span>
-<span class="nc bnc" id="L65" title="All 2 branches missed.">        if (null != previousFlight) {</span>
-<span class="nc bnc" id="L66" title="All 2 branches missed.">            if (!previousFlight.removePassenger(this)) {</span>
+<span class="fc" id="L64">        Flight previousFlight = this.flight;</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        if (null != previousFlight) {</span>
+<span class="pc bpc" id="L66" title="1 of 2 branches missed.">            if (!previousFlight.removePassenger(this)) {</span>
 <span class="nc" id="L67">                throw new RuntimeException(&quot;Cannot remove passenger&quot;);</span>
             }
         }
-<span class="nc" id="L70">        setFlight(flight);</span>
-<span class="nc bnc" id="L71" title="All 2 branches missed.">        if (null != flight) {</span>
-<span class="nc bnc" id="L72" title="All 2 branches missed.">            if (!flight.addPassenger(this)) {</span>
+<span class="fc" id="L70">        setFlight(flight);</span>
+<span class="pc bpc" id="L71" title="1 of 2 branches missed.">        if (null != flight) {</span>
+<span class="pc bpc" id="L72" title="1 of 2 branches missed.">            if (!flight.addPassenger(this)) {</span>
 <span class="nc" id="L73">                throw new RuntimeException(&quot;Cannot add passenger&quot;);</span>
             }
         }
-<span class="nc" id="L76">    }</span>
+<span class="fc" id="L76">    }</span>
 
     public void setFlight(Flight flight) {
-<span class="nc" id="L79">        this.flight = flight;</span>
-<span class="nc" id="L80">    }</span>
+<span class="fc" id="L79">        this.flight = flight;</span>
+<span class="fc" id="L80">    }</span>
 
     @Override
     public String toString() {
