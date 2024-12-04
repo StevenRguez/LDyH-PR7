@@ -36,5 +36,12 @@ public class PassengersTest {
             assertEquals("Lola Mento Máximo", pasajeroDos.getName());
             assertEquals("Esteban Quito Santander", pasajeroTres.getName());
         }
+
+        @Test
+        void testConstructorCountryCode() {
+            assertEquals("ES", pasajeroUno.getCountryCode());
+            assertEquals("US", pasajeroDos.getCountryCode());
+            assertEquals("FR", pasajeroTres.getCountryCode());
+        }
     }
 }

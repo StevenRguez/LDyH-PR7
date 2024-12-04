@@ -3,5 +3,5 @@ projectKey=StevenRguez_LDyH-pr7
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.58386
 dashboardUrl=https://sonarcloud.io/dashboard?id=StevenRguez_LDyH-pr7
-ceTaskId=AZOTq5guqUGiooWqz5Sm
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZOTq5guqUGiooWqz5Sm
+ceTaskId=AZOTreVX2cASHwe9Ktd4
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZOTreVX2cASHwe9Ktd4
