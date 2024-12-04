@@ -20,14 +20,21 @@ public class PassengersTest {
         void setUp() {
             pasajeroUno = new Passenger("SRM", "Steven Rodríguez Morales", "ES");
             pasajeroDos = new Passenger("LMM", "Lola Mento Máximo", "US");
-            pasajeroTres= new Passenger("ECS", "Esteban Co Santander", "FR");
+            pasajeroTres= new Passenger("EQS", "Esteban Quito Santander", "FR");
         }
 
         @Test
         void testConstructorIdentificador() {
             assertEquals("SRM", pasajeroUno.getIdentifier());
             assertEquals("LMM", pasajeroDos.getIdentifier());
-            assertEquals("ECS", pasajeroTres.getIdentifier());
+            assertEquals("EQS", pasajeroTres.getIdentifier());
+        }
+
+        @Test
+        void testConstructorNombre() {
+            assertEquals("Steven Rodríguez Morales", pasajeroUno.getName());
+            assertEquals("Lola Mento Máximo", pasajeroDos.getName());
+            assertEquals("Esteban Quito Santander", pasajeroTres.getName());
         }
     }
 }
