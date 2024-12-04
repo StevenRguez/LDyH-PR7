@@ -40,7 +40,7 @@ public class FlightTest {
         }
 
         @Test
-        void shouldThrowExceptionWhenFlightNumberIsInvalid() {
+        void testExcepcionPatronErroneo() {
             assertThrows(RuntimeException.class, () -> new Flight("INVALID123", 100));
         }
     }

@@ -43,5 +43,10 @@ public class PassengersTest {
             assertEquals("US", pasajeroDos.getCountryCode());
             assertEquals("FR", pasajeroTres.getCountryCode());
         }
+
+        @Test
+        void testExcepcionCountryCode() {
+            assertThrows(RuntimeException.class, () -> new Passenger("12345", "John Doe", "ZZ"));
+        }
     }
 }
