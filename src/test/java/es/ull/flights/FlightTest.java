@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FlightTest {
-    @DisplayName("Tests de la clase ")
+    @DisplayName("Tests de la clase Flight")
     @Nested
-    class EconomyFlightTest {
+    class TestsBasicosClaseFlight {
 
         private Flight vueloUno;
         private Flight vueloDos;
