@@ -35,8 +35,8 @@ public class Passenger {
     private Flight flight;
 
 <span class="fc" id="L37">    public Passenger(String identifier, String name, String countryCode) {</span>
-<span class="pc bpc" id="L38" title="1 of 2 branches missed.">        if (!Arrays.asList(Locale.getISOCountries()).contains(countryCode)) {</span>
-<span class="nc" id="L39">            throw new RuntimeException(&quot;Invalid country code&quot;);</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        if (!Arrays.asList(Locale.getISOCountries()).contains(countryCode)) {</span>
+<span class="fc" id="L39">            throw new RuntimeException(&quot;Invalid country code&quot;);</span>
         }
 
 <span class="fc" id="L42">        this.identifier = identifier;</span>
